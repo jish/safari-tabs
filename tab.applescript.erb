@@ -1,0 +1,8 @@
+
+tell application "Safari"
+  try
+    tell front window to set current tab to tab <%= i %>
+  on error
+    tell front window to set current tab to last tab
+  end try
+end tell
